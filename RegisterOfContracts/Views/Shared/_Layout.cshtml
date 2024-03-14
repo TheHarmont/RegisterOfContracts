@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/img/site-ico.ico" type="image/x-icon">
+    <title>@ViewData["Title"] - Реестр контрактов</title>
+
+    <!--DataTables-->
+    <link rel="stylesheet" href="~/lib/datatables.css"/>
+    <link rel="stylesheet" href="~/lib/DataTables-1.13.8/css/dataTables.foundation.min.css" asp-append-version="true" />
+    <!--Основные файлы стилей-->
+    <link rel="stylesheet" href="~/RegisterOfContracts.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!--CookieJS-->
+    <script src="~/lib/CookieJS-3.0.5/js.cookie.min.js"></script>
+    <!--DataTables-->
+    
+    <script src="~/lib/datatables.js"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</head>
+<body>
+    <header>
+        <div class="logo-container container">
+            <div></div>
+            <h1 class="text-center"> Реестр контрактов</h1>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-5 pt-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            &copy; @DateTime.Now.Year - МИАЦ Хабаровск
+        </div>
+    </footer>
+    
+</body>
+</html>
